@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>NewsMate : Health</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+	
+	<!-- Stylesheets -->
+	
+	<link href="../home/plugin-frameworks/bootstrap.min.css" rel="stylesheet">
+	<link href="../home/plugin-frameworks/swiper.css" rel="stylesheet">
+	
+	<link href="../home/fonts/ionicons.css" rel="stylesheet">
+	
+		
+	<link href="../home/common/styles.css" rel="stylesheet">
+	
+	
+</head>
+<body>
+	<header>
+		<a class="logo" href="#"><img src="../home/images/logo-white.png" alt="Logo"></a>
+		
+		<div class="right-area">
+			<form class="src-form">
+				<button type="submit"><i class="ion-search"></i></a></button>
+				<input type="text" placeholder="Search here">
+			</form><!-- src-form -->
+		</div><!-- right-area -->
+		
+		<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+		
+		<ul class="main-menu" id="main-menu">
+			<li><a href="/">Home</a></li>
+			<li class="drop-down"><a href="#!">Category<i class="ion-arrow-down-b"></i></a>
+				<ul class="drop-down-menu drop-down-inner">
+					<li><a href="#">Business</a></li>
+					<li><a href="#">Entertainment</a></li>
+					<li><a href="#">Health</a></li>
+					<li><a href="#">Science</a></li>
+					<li><a href="#">Sports</a></li>
+					<li><a href="#">Technology</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Top News</a></li>
+			<li><a href="#">Local News</a></li>
+			<li><a href="#">International</a></li>
+			<li><a href="#">Country Based</a></li>
+		</ul>
+		
+		<div class="clearfix"></div>
+	</header>
+	
+	
+	<div class="slider-main h-500x h-sm-auto pos-relative pt-95 pb-25">
+		<div class="img-bg bg-11 bg-layer-4"></div>
+		<div class="container-fluid h-100 mt-xs-50">
+			<div class="dplay-tbl">
+				<div class="dplay-tbl-cell color-white text-center">
+				
+					<h1 class="ptb-50"><b>HEALTH</b></h1>
+					
+				</div><!-- dplay-tbl-cell -->
+			</div><!-- dplay-tbl -->
+		</div><!-- container -->
+	</div><!-- slider-main -->
+	
+	
+	<section class="bg-1-white ptb-0">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-2 col-md-2"></div>
+				<div class="col-md-8 col-lg-8 ptb-50 pr-30 pr-md-15">
+					
+					<h4 class="mb-30 mt-20 clearfix"><b>Latest Articles</b></h4>
+					
+					
+					<div class="row">
+						<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-30">
+							<h3>Health in World</h3>
+							<br><br>
+							
+								<div class="card h-100 bg-white">
+									<% for(let i=0 ;i<20 ;i++) {%>
+										<div class="h-50 pb-15">
+										<div class="plr-25 ptb-15 h-100">
+											<div class="dplay-tbl">
+												<div class="dplay-tbl-cell">
+													<h5 class="color-ash"><b>
+														by
+														<%= topHealthHeadlines.articles[i].source.name %> 
+													</b></h5>
+													<h2 class="mtb-10"><a href="<%=
+															topHealthHeadlines.articles[i].url
+														%>">
+														<b>
+															<%= (topHealthHeadlines.articles[i].title).slice(0,40) %> 
+														</b></a></h2>
+												</div><!-- dplay-tbl-cell -->
+											</div><!-- dplay-tbl -->
+										</div><!-- plr-25 ptb-15 -->
+									</div> 
+										<br>
+									<%}%>
+
+								</div><!-- card -->
+						</div><!-- col-lg-4 col-md-6 -->
+						
+						<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-30">
+							<h3>Health in Your Country</h3>
+							<br><br>
+
+
+							<div class="card h-100">
+								<% for(let i=10 ;i<20 ;i++) {%> 
+								<div class="h-50 pb-15">
+									<div class="plr-25 h-100 ptb-15 bg-layer-4 bg-white">
+										<div class="dplay-tbl">
+											<div class="dplay-tbl-cell">
+											
+												<h5 class="color-grey"><b>
+													by
+													<%= topHealthHeadlinesCountry.articles[i].source.name %> 
+												</b></h5>
+												<h4 class="mtb-10"><a href="<%=
+														topHealthHeadlinesCountry.articles[i].url
+													%>"><b>
+													<%= (topHealthHeadlinesCountry.articles[i].title).slice(0,50) %> 
+												</b></a></h4>
+												<ul class="list-li-mr-10 color-grey">
+												</ul>
+												
+											</div><!-- dplay-tbl-cell -->
+										</div><!-- dplay-tbl -->
+									</div><!-- plr-25 ptb-15 -->
+								</div><!--h-50 bg-white -->
+								<%}%>
+								<% for(let i=10 ;i<20 ;i++) {%> 
+								<div class="h-50 pt-15">
+									
+									<!-- SETTING IMAGE WITH bg-7 -->
+								
+									<div class="plr-25 ptb-15 pos-relative h-100 bg-12 bg-layer-4 color-white">
+										<div class="dplay-tbl">
+											<div class="dplay-tbl-cell">
+											
+												<h5 class="color-grey"><b>
+													by
+													<%= topHealthHeadlinesCountry.articles[i].source.name %> 
+												</b></h5>
+												<h4 class="mtb-10"><a href="<%=
+														topHealthHeadlinesCountry.articles[i].url
+													%>"><b>
+													<%= (topHealthHeadlinesCountry.articles[i].title).slice(0,50) %> 
+												</b></a></h4>
+												<ul class="list-li-mr-10 color-grey">
+												</ul>
+												
+											</div><!-- dplay-tbl-cell -->
+										</div><!-- dplay-tbl -->
+									</div><!-- plr-25 ptb-15 -->
+								</div><!--h-50 bg-white -->
+								<%}%>
+								
+							</div><!-- card -->
+						</div><!-- col-lg-4 col-md-6 -->
+						<!-- END OF SECOND PARA -->
+					</div><!-- row -->
+
+					
+					
+				</div><!-- col-sm-9 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section>
+	
+	
+	<footer class="bg-191 color-ash pt-50 pb-20 text-left center-sm-text">
+		
+		<div class="container-fluid">
+			<div class="row">
+			
+				<div class="col-lg-1"></div>
+				
+				<div class="col-md-4 col-lg-6 mb-30">
+					<div class="card h-100">
+						<div class="dplay-tbl">
+							<div class="dplay-tbl-cell">
+							
+								<a href="#"><img src="../home/images/logo-white.png"></a>
+								
+							</div><!-- dplay-tbl-cell -->
+						</div><!-- dplay-tbl -->
+					</div><!-- card -->
+				</div><!-- col-lg-4 col-md-6 -->
+				
+				
+			</div><!-- row -->
+		</div><!-- container -->
+	</footer>
+	
+	<!-- SCIPTS -->
+	
+	<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
+	
+	<script src="plugin-frameworks/bootstrap.min.js"></script>
+	
+	<script src="plugin-frameworks/swiper.js"></script>
+	
+	
+	<script src="common/scripts.js"></script>
+	
+</body>
+</html>

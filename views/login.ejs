@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Register : News Mate</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="../register/fonts/linearicons/style.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="../register/css/style.css">
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raxraj/colorify/src/minified/colorify.min.css">
+		
+	</head>
+
+	<body>
+		
+
+		<div class="wrapper cy-bg-gd-hazel">
+			<div class="inner">
+				
+				<form action="/login" method="POST">
+					<h3>Login</h3>
+					<%if(messages.error){%>
+						<div class="text-danger text-center "><%=messages.error%></div>
+						<% } %>
+					<%if(messages.success){%>
+						<h3 class="cy-text-mt-green400 text-center "><%=messages.success%></h3>
+						<% } %>
+					<div class="form-holder">
+						<span class="lnr lnr-user"></span>
+						<input type="text" id="username" name="username" class="form-control" placeholder="Username">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" id="password" name="password" class="form-control" placeholder="Password">
+					</div>
+					<button type="submit" class="cy-btn btn-outline-mt-blue cy-btn-slide-right hover-bg-mt-blue">
+						<span>Login</span>
+					</button>
+					<p>Not Registered? <a href="/register">Create Account.</a> </p>
+				</form>
+				
+			</div>
+			
+		</div>
+		
+		<script src="../register/js/jquery-3.3.1.min.js"></script>
+		<script src="../register/js/main.js"></script>
+	
+	</body>
+</html>
