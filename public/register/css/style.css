@@ -38,8 +38,7 @@ a {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: #accffe; }
+  justify-content: center; }
 
 .inner {
   position: relative;
