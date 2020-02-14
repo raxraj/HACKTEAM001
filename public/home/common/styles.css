@@ -136,9 +136,9 @@ header i{ font-size: 1.1em; }
 
 header:after{ content:''; clear: both; }
 
-header .logo{ float: left; height: 70px; }
+header .logo{ float: left; height: 50px; }
 
-header .logo img{ height: 64px; width: auto; }
+header .logo img{ height: 50px !important; width: auto; }
 
 header ul.main-menu > li > a{ height: 100%; line-height: 70px; padding: 0px 15px; }
 
